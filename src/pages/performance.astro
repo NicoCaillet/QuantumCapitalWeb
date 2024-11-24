@@ -1,0 +1,49 @@
+---
+import Footer from "../components/footer.astro";
+import MainLayout from "../layouts/mainLayout.astro";
+---
+
+<MainLayout />
+<!-- Imagen de fondo -->
+<img src="/city.jpg" alt="" class="absolute top-0 w-full h-screen" />
+
+<!-- Contenido Absolute -->
+<div
+  class="perfo absolute bottom-5 left-1/2 w-full max-w-[1300px] flex justify-between items-center transform -translate-x-1/2"
+>
+  <div class="flex-1 text-left text-white">
+    <h4 class="text-xl font-semibold m-auto">
+      We employ a disciplined <br />
+      approach to achieve consistent, risk-adjusted returns.
+    </h4>
+  </div>
+  <div class="h-32 w-[2px] bg-white"></div>
+  <div class="flex-1 text-center text-white self-start">
+    <h4 class="text-[60px] font-bold">2020</h4>
+    <p>Date of Foundation</p>
+  </div>
+  <div class="h-32 w-[2px] bg-white"></div>
+  <div class="flex-1 text-center text-white self-start">
+    <h4 class="text-[60px] font-bold">$45M</h4>
+    <p>AUM</p>
+  </div>
+  <div class="h-32 w-[2px] bg-white"></div>
+  <div class="flex-1 text-center text-white self-start">
+    <h4 class="text-[60px] font-bold">33%</h4>
+    <p>CAGR</p>
+  </div>
+</div>
+
+<!-- Nueva sección debajo -->
+<section class="bg-white h-[600px] mt-[100vh]">
+  <div>hoola</div>
+</section>
+
+<Footer />
+
+<style>
+  .perfo {
+    left: 50%; /* Centro relativo al contenedor */
+    transform: translateX(-50%); /* Corrige el desplazamiento del 50% */
+  }
+</style>

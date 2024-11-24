@@ -1,0 +1,55 @@
+---
+import Footer from "../components/footer.astro";
+import MainLayout from "../layouts/mainLayout.astro";
+---
+
+<MainLayout />
+<section class="bg-black h-64 relative">
+  <div>
+    <img src="/about.jpg" alt="" class="absolute top-28 w-full" />
+  </div>
+</section>
+<section class="mt-20">
+  <div class="max-w-[1300px] m-auto">
+    <div class="h-[2px] w-28 bg-black mb-8 mt-28"></div>
+    <h2 class="font-semibold text-xl mb-5">Investment Manager</h2>
+    <div class="space-y-5">
+      <p>
+        Quantum Capital Ltd, a closed-ended investment fund based in British
+        Virgin Island, focuses on acquiring stakes in large-cap companies to
+        enhance long-term shareholder value. Since its inception, Quantum has
+        aimed at strategic investments in high-quality businesses, managed by
+        Quantum Capital Global Investments.
+      </p>
+      <p>Quantum's registered address is:</p>
+      <p>
+        XXX N, <br />
+        ZONE, CP, <br />
+        CITY, COUNTRY
+      </p>
+    </div>
+    <div class="mt-10">
+      <div class="space-y-5">
+        <strong class="mb-5">QCIG Documents</strong>
+        <p class="underline">
+          Form ADV, Part 2A and Part 2B, Dated March 2023 (PLACEHOLDER TEXT)
+        </p>
+        <p class="underline">
+          Approval granted by the European Financial Markets Authority on
+          October 10, 2014. (PLACEHOLDER TEXT)
+        </p>
+        <p class="underline">
+          SEC Order Granting Registration (PLACEHOLDER TEXT)
+        </p>
+      </div>
+      <div class="space-y-5 mt-10 pb-44">
+        <strong>QCIG Reports</strong>
+        <p class="underline">2020 Financial Statements</p>
+        <p class="underline">2021 Financial Statements</p>
+        <p class="underline">2022 Financial Statements</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<Footer />

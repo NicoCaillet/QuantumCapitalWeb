@@ -1,0 +1,47 @@
+---
+import NavBar from "../components/navbar.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/icon.jpg" type="image/jpg" />
+
+    <title>Quantum Capital</title>
+  </head>
+  <body>
+    <!-- Aquí se incluye el NavBar para que esté en todas las páginas -->
+    <NavBar />
+    <!-- Contenido dinámico de cada página -->
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @font-face {
+    font-family: "Futura Pt";
+    src: url("/font/FuturaCyrillicMedium.tff") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  h1 {
+    font-family: "Futura Pt";
+  }
+  p {
+    font-family: "Futura Pt";
+  }
+
+  h4 {
+    font-family: "Futura Pt";
+  }
+
+  h2 {
+    font-family: "Futura Pt";
+  }
+
+  a {
+    font-family: "Futura Pt";
+  }
+</style>

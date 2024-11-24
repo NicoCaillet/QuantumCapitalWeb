@@ -1,0 +1,214 @@
+---
+
+---
+
+<section
+  class="content-image first-image right parallax-window"
+  data-parallax="scroll"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="content-text-block">
+          <div class="content-text">
+            <div class="block fadeInUp animated">
+              <h2 class="text-3xl font-semibold mb-3">
+                A particular approach.
+              </h2>
+              <h4 class="mb-5">
+                We seek to harness the complexities of global derivatives
+                markets with disciplined strategic insight, an experienced,
+                accomplished team and advanced technology to create sustainable
+                value. We’ve created a particular approach to investment that we
+                believe drives continuous improvement and opportunities for our
+                clients, team and industry.
+              </h4>
+              <div class="h-[2px] w-28 bg-white"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="content-image sec-image left parallax-window"
+  data-parallax="scroll"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="content-text-block">
+          <div class="content-text">
+            <div class="block fadeInUp animated">
+              <h2 class="text-3xl font-semibold mb-3">
+                A particular approach.
+              </h2>
+              <h4 class="mb-5">
+                We seek to harness the complexities of global derivatives
+                markets with disciplined strategic insight, an experienced,
+                accomplished team and advanced technology to create sustainable
+                value. We’ve created a particular approach to investment that we
+                believe drives continuous improvement and opportunities for our
+                clients, team and industry.
+              </h4>
+              <div class="h-[2px] w-28 bg-white"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="content-image right third-image parallax-window"
+  data-parallax="scroll"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="content-text-block">
+          <div class="content-text">
+            <div class="block fadeInUp animated">
+              <h2 class="text-3xl font-semibold mb-3">
+                A particular approach.
+              </h2>
+              <h4 class="z-10 mb-5">
+                We seek to harness the complexities of global derivatives
+                markets with disciplined strategic insight, an experienced,
+                accomplished team and advanced technology to create sustainable
+                value. We’ve created a particular approach to investment that we
+                believe drives continuous improvement and opportunities for our
+                clients, team and industry.
+              </h4>
+              <div class="h-[2px] w-28 bg-white"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    overflow: hidden;
+  }
+  .content-image {
+    float: left;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .first-image {
+    background-image: url("/bg-1.jpg");
+  }
+
+  .sec-image {
+    background-image: url("/bg-2.jpg");
+  }
+  .third-image {
+    background-image: url("/bg-3.jpg");
+  }
+
+  .row {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+  }
+  .col-xs-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .left .content-text-block {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  .right .content-text-block {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .content-text-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  .content-text-block .content-text {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    position: relative;
+    max-width: 550px;
+    color: white;
+  }
+  .content-image.left:before {
+    content: "";
+    width: 70%;
+    height: 0%;
+    border-top: 100vh solid black;
+    border-left: 50vh solid transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .content-image.right:before {
+    content: "";
+    width: 70%;
+    height: 0%;
+    border-top: 100vh solid black;
+    border-right: 50vh solid transparent;
+    position: absolute;
+    top: 0;
+  }
+
+  .container {
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .content-image {
+      background-attachment: fixed;
+    }
+  }
+  .content-image.left {
+    background-position: left center;
+  }
+  .content-image.right {
+    background-position: right center;
+  }
+
+  @media only screen and (max-width: 1440px) {
+    .container {
+      max-width: 1300px;
+    }
+    .content-image.right:before,
+    .content-image.left:before {
+      width: 75%;
+    }
+  }
+</style>

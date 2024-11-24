@@ -1,0 +1,53 @@
+---
+const logoUrl = ""; // Cambia esta ruta a la de tu logo
+---
+
+<nav class="navbar main-layout-overlay">
+  <!-- Logo -->
+  <div class="navbar-logo">
+    <a href="/">
+      <img src="/Logo Quantum.png" alt="Logo de la Marca" />
+    </a>
+  </div>
+
+  <ul role="list" class="navbar-links">
+    <a href="/about">About Us + </a>
+    <a href="/performance" class="">Performance</a>
+    <a href="/realeases">Press Release</a>
+  </ul>
+</nav>
+
+<style>
+  .navbar {
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Alineado al borde superior */
+    left: 50%; /* Centro relativo al contenedor */
+    transform: translateX(-50%); /* Corrige el desplazamiento del 50% */
+    width: 100%; /* Asegura que abarque todo el ancho disponible */
+    max-width: 1300px; /* Define un ancho máximo */
+    background: transparent; /* Fondo transparente */
+    display: flex; /* Flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Espaciado entre elementos */
+    z-index: 3; /* Asegura que esté por encima del resto */
+    padding: 20px 0;
+  }
+
+  .navbar-logo img {
+    height: 50px;
+    width: auto;
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+  }
+</style>
