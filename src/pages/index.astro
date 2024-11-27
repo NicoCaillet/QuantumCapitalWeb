@@ -1,5 +1,4 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import MainLayout from "../layouts/mainLayout.astro";
 import Section from "../components/section.astro";
 import Newsletter from "../components/newsletter.astro";
@@ -22,11 +21,20 @@ import Footer from "../components/footer.astro";
         superior long-term returns for the world’s preeminent public and private
         institutions.
       </p>
+      <button
+        class="bg-[#D9D9D9]/20 w-[45px] h-[80px] rounded-full text-2xl text-[#ffffff]/60 mt-10"
+        onclick="scrollToSection()"
+      >
+        &darr;</button
+      >
     </div>
   </section>
 </div>
 
-<section class="flex text-white justify-center bg-black h-72 items-center">
+<section
+  class="flex text-white justify-center bg-black h-72 items-center"
+  id="target-section"
+>
   <div class="flex justify-between items-center max-w-[1000px] w-full">
     <h2 class="text-3xl font-semibold">
       Transforming Capital. <br /> Empowering Growth
@@ -42,6 +50,15 @@ import Footer from "../components/footer.astro";
 <Section />
 <Newsletter />
 <Footer />
+
+<script>
+  function scrollToSection() {
+    const targetSection = document.getElementById("target-section");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+</script>
 <style>
   /* Contenedor del video y el texto centrado */
   .video-container {

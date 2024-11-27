@@ -1,42 +1,176 @@
 ---
 import Footer from "../components/footer.astro";
 import MainLayout from "../layouts/mainLayout.astro";
+import PerformanceTable from "../components/PerformanceTable.jsx";
+const data = [
+  {
+    percentage: 0,
+    year: 2024,
+    thisYear: true,
+    tableHeaders: [
+      "Main asd",
+      "Security Type",
+      "Industry",
+      "Invest Category",
+      "Company",
+      "Shares",
+      "Cost/Share",
+      "Last Price",
+      "Dividends Collected",
+      "Total Gain/Loss",
+    ],
+    tableRows: [
+      {
+        mainMarket: "NASDAQ",
+        securityType: "Stock",
+        industry: "Tech",
+        investCategory: "Growth",
+        company: "TechCorp",
+        shares: 100,
+        costPerShare: 50.0,
+        lastPrice: 75.5,
+        dividendsCollected: 500,
+        totalGainLoss: 2550,
+      },
+    ],
+  },
+  {
+    percentage: 20,
+    year: 2023,
+    thisYear: false,
+    tableHeaders: [
+      "Main sasa",
+      "Security Type",
+      "Industry",
+      "Invest Category",
+      "Company",
+      "Shares",
+      "Cost/Share",
+      "Last Price",
+      "Dividends Collected",
+      "Total Gain/Loss",
+    ],
+    tableRows: [
+      {
+        mainMarket: "NASDAQ",
+        securityType: "Stock",
+        industry: "Tech",
+        investCategory: "Growth",
+        company: "TechCorp",
+        shares: 100,
+        costPerShare: 50.0,
+        lastPrice: 75.5,
+        dividendsCollected: 500,
+        totalGainLoss: 2550,
+      },
+    ],
+  },
+  {
+    percentage: 30,
+    year: 2022,
+    thisYear: false,
+    tableHeaders: [
+      "Main sss",
+      "Security Type",
+      "Industry",
+      "Invest Category",
+      "Company",
+      "Shares",
+      "Cost/Share",
+      "Last Price",
+      "Dividends Collected",
+      "Total Gain/Loss",
+    ],
+    tableRows: [
+      {
+        mainMarket: "NASDAQ",
+        securityType: "Stock",
+        industry: "Tech",
+        investCategory: "Growth",
+        company: "TechCorp",
+        shares: 100,
+        costPerShare: 50.0,
+        lastPrice: 75.5,
+        dividendsCollected: 500,
+        totalGainLoss: 2550,
+      },
+    ],
+  },
+  {
+    percentage: 10,
+    year: 2021,
+    thisYear: false,
+    tableHeaders: [
+      "Main Mtaraarket",
+      "Security Type",
+      "Industry",
+      "Invest Category",
+      "Company",
+      "Shares",
+      "Cost/Share",
+      "Last Price",
+      "Dividends Collected",
+      "Total Gain/Loss",
+    ],
+    tableRows: [
+      {
+        mainMarket: "NASDAQ",
+        securityType: "Stock",
+        industry: "Tech",
+        investCategory: "Growth",
+        company: "TechCorp",
+        shares: 100,
+        costPerShare: 50.0,
+        lastPrice: 75.5,
+        dividendsCollected: 500,
+        totalGainLoss: 2550,
+      },
+    ],
+  },
+];
 ---
 
 <MainLayout />
 <!-- Imagen de fondo -->
-<img src="/city.jpg" alt="" class="absolute top-0 w-full h-screen" />
+<img src="/city.jpg" alt="" class="top-0 w-full z-0 h-[500px]" />
 
 <!-- Contenido Absolute -->
-<div
-  class="perfo absolute bottom-5 left-1/2 w-full max-w-[1300px] flex justify-between items-center transform -translate-x-1/2"
->
-  <div class="flex-1 text-left text-white">
-    <h4 class="text-xl font-semibold m-auto">
-      We employ a disciplined <br />
-      approach to achieve consistent, risk-adjusted returns.
-    </h4>
-  </div>
-  <div class="h-32 w-[2px] bg-white"></div>
-  <div class="flex-1 text-center text-white self-start">
-    <h4 class="text-[60px] font-bold">2020</h4>
-    <p>Date of Foundation</p>
-  </div>
-  <div class="h-32 w-[2px] bg-white"></div>
-  <div class="flex-1 text-center text-white self-start">
-    <h4 class="text-[60px] font-bold">$45M</h4>
-    <p>AUM</p>
-  </div>
-  <div class="h-32 w-[2px] bg-white"></div>
-  <div class="flex-1 text-center text-white self-start">
-    <h4 class="text-[60px] font-bold">33%</h4>
-    <p>CAGR</p>
+<div class="w-full bg-black z-40 h-52 content-center">
+  <div
+    class="max-w-[1000px] xl:max-w-[1300px] flex justify-between items-center m-auto"
+  >
+    <div class="flex-1 text-left text-white xl:self-start">
+      <h4 class="text-2xl m-auto font-medium mt-1">
+        We employ a disciplined <br />
+        approach to achieve <br /> consistent, risk-adjusted returns.
+      </h4>
+    </div>
+    <div class="h-40 w-[2px] bg-white"></div>
+    <div class="flex-1 text-center text-white self-start space-y-3">
+      <h4 class="text-[60px] font-semibold -mt-4">2020</h4>
+      <p>Date of Foundation</p>
+    </div>
+    <div class="h-40 w-[2px] bg-white"></div>
+    <div class="flex-1 text-center text-white self-start space-y-3">
+      <h4 class="text-[60px] font-semibold -mt-4">$45M</h4>
+      <p>AUM</p>
+    </div>
+    <div class="h-40 w-[2px] bg-white"></div>
+    <div class="flex-1 text-center text-white self-start space-y-3">
+      <h4 class="text-[60px] font-semibold -mt-4">33%</h4>
+      <p>CAGR</p>
+    </div>
   </div>
 </div>
 
-<!-- Nueva sección debajo -->
-<section class="bg-white h-[600px] mt-[100vh]">
-  <div>hoola</div>
+<!-- SECTION TABLE -->
+<section class="bg-white h-[800px]">
+  <div class="mx-auto py-12 max-w-[1000px] xl:max-w-[1300px]">
+    <div class="h-[2px] w-28 bg-black mb-10"></div>
+    <h2 class="text-3xl font-semibold mb-4">Net Asset Values and Returns</h2>
+    <!-- Menu solo year - Esto aparece cuando una box se ha tocado -->
+    <PerformanceTable client:load data={data} />
+  </div>
 </section>
 
 <Footer />

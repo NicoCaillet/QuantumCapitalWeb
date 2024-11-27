@@ -1,0 +1,79 @@
+---
+import Footer from "../components/footer.astro";
+import MainLayout from "../layouts/mainLayout.astro";
+
+// Define the array with the necessary data
+const newsItems = [
+  {
+    year: "2024",
+    type: "Press Release",
+    title: "Quantum Capital Announces:",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Facilisis vel at integer a laoreet.",
+  },
+  {
+    year: "2024",
+    type: "Press Release",
+    title: "Quantum Capital Expands Operations:",
+    description:
+      "Aliquam ac erat volutpat sed urna. Curabitur venenatis est nunc.",
+  },
+  {
+    year: "2024",
+    type: "Press Release",
+    title: "New Partnership Announced:",
+    description: "Aenean sed adipiscing elit fusce tristique volutpat mi.",
+  },
+  {
+    year: "2024",
+    type: "Press Release",
+    title: "Financial Report Released:",
+    description: "Ut enim ad minim veniam quis nostrud exercitation ullamco.",
+  },
+  {
+    year: "2024",
+    type: "Press Release",
+    title: "Leadership Changes at Quantum:",
+    description:
+      "Proin facilisis nisi euismod consequat ultricies lorem facilisis.",
+  },
+  {
+    year: "2024",
+    type: "Press Release",
+    title: "Innovative Solutions Launched:",
+    description:
+      "Suspendisse potenti. Integer commodo quam vel tincidunt feugiat.",
+  },
+];
+---
+
+<MainLayout />
+<section class="bg-black h-28 relative"></section>
+<section class="bg-black h-[110vh] xl:h-screen">
+  <div class="max-w-[1000px] xl:max-w-[1300px] m-auto pt-10">
+    <div class="h-[2px] w-28 bg-white mb-4"></div>
+    <h2 class="font-semibold text-white text-2xl mb-10">
+      News & Press Releases
+    </h2>
+    <div class="grid grid-cols-2 gap-12">
+      {
+        newsItems.map((item) => (
+          <div class="flex flex-col group transition-all duration-[1000ms] text-[#A3A3A3] hover:text-white w-[350px]">
+            <div class="flex space-x-2 items-center">
+              <p class="text-sm">{item.year}</p>
+              <p class="text-sm">{item.type}</p>
+            </div>
+            <div class="flex items-center space-x-4">
+              <p class="text-xl text-[#A3A3A3] hover:text-white transform group-hover:scale-x-150 transition-transform duration-[1000ms] origin-left">
+                &rarr;
+              </p>
+              <p class="underline text-lg">{item.title}</p>
+            </div>
+            <p class="text-lg">{item.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+<Footer />

@@ -1,0 +1,20 @@
+<!-- ---
+const { data, selectedYear, setSelectedYear } = Astro.props;
+---
+
+<div class="w-[700px] flex border-2 border-black mb-6">
+  {
+    data.map((item) => (
+      <div
+        class={`border-r-2 border-black p-3 w-full text-center last:border-0 font-semibold text-xl cursor-pointer ${
+          item.year === selectedYear
+            ? "bg-black text-white"
+            : "hover:bg-black hover:text-white"
+        }`}
+        onClick={() => setSelectedYear(item.year)}
+      >
+        {item.year}
+      </div>
+    ))
+  }
+</div> -->
