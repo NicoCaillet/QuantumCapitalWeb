@@ -4,16 +4,16 @@ import MainLayout from "../layouts/mainLayout.astro";
 ---
 
 <MainLayout />
-<section class="bg-black h-64 relative">
+<section class="bg-black h-64 relative mo:h-40">
   <div>
-    <img src="/about.jpg" alt="" class="absolute top-28 w-full" />
+    <img src="/about.jpg" alt="" class="absolute top-28 w-full mo:h-20" />
   </div>
 </section>
-<section class="mt-20">
-  <div class="max-w-[1000px] xl:max-w-[1300px] m-auto">
-    <div class="h-[2px] w-28 bg-black mb-8 mt-36"></div>
+<section class="mt-14 xl:mt-28 mo:mt-14">
+  <div class="max-w-[1000px] xl:max-w-[1300px] m-auto mo:px-5">
+    <div class="h-[2px] w-28 bg-black mb-10 mt-10 mo:mb-5"></div>
     <h2 class="font-semibold text-xl mb-5">Quantum Capital Ltd.</h2>
-    <div class="space-y-5 pb-52">
+    <div class="space-y-5 pb-52 mo:pb-10">
       <p class="">
         Quantum Capital and its affiliates (“QCIG”) manage private investment
         funds using a value-based philosophy with a fundamental bottoms-up
@@ -50,6 +50,49 @@ import MainLayout from "../layouts/mainLayout.astro";
         to mitigate market-related risks and capitalize on asymmetric investment
         opportunities.
       </p>
+    </div>
+  </div>
+</section>
+
+<section class="hidden mo:block">
+  <div class="m-auto mo:px-5">
+    <div class="h-[2px] w-28 bg-black mb-10 mt-10"></div>
+    <h2 class="font-semibold text-xl mb-5">Investment Manager</h2>
+    <div class="space-y-5">
+      <p>
+        Quantum Capital Ltd, a closed-ended investment fund based in British
+        Virgin Island, focuses on acquiring stakes in large-cap companies to
+        enhance long-term shareholder value. Since its inception, Quantum has
+        aimed at strategic investments in high-quality businesses, managed by
+        Quantum Capital Global Investments.
+      </p>
+      <p>Quantum's registered address is:</p>
+      <p>
+        XXX N, <br />
+        ZONE, CP, <br />
+        CITY, COUNTRY
+      </p>
+    </div>
+    <div class="mt-10">
+      <div class="space-y-5">
+        <strong class="mb-5">QCIG Documents</strong>
+        <p class="underline">
+          Form ADV, Part 2A and Part 2B, Dated March 2023 (PLACEHOLDER TEXT)
+        </p>
+        <p class="underline">
+          Approval granted by the European Financial Markets Authority on
+          October 10, 2014. (PLACEHOLDER TEXT)
+        </p>
+        <p class="underline">
+          SEC Order Granting Registration (PLACEHOLDER TEXT)
+        </p>
+      </div>
+      <div class="space-y-5 mt-10 pb-5">
+        <strong>QCIG Reports</strong>
+        <p class="underline">2020 Financial Statements</p>
+        <p class="underline">2021 Financial Statements</p>
+        <p class="underline">2022 Financial Statements</p>
+      </div>
     </div>
   </div>
 </section>

@@ -49,13 +49,13 @@ const newsItems = [
 
 <MainLayout />
 <section class="bg-black h-28 relative"></section>
-<section class="bg-black h-[110vh] xl:h-screen">
+<section class="bg-black h-[110vh] xl:h-screen mo:h-auto mo:pb-5">
   <div class="max-w-[1000px] xl:max-w-[1300px] m-auto pt-10">
-    <div class="h-[2px] w-28 bg-white mb-4"></div>
-    <h2 class="font-semibold text-white text-2xl mb-10">
+    <div class="h-[2px] w-28 bg-white mb-4 mo:ml-5"></div>
+    <h2 class="font-semibold text-white text-2xl mb-10 mo:mb-0 mo:p-5">
       News & Press Releases
     </h2>
-    <div class="grid grid-cols-2 gap-12">
+    <div class="grid grid-cols-2 gap-12 mo:grid-cols-1 mo:p-5">
       {
         newsItems.map((item) => (
           <div class="flex flex-col group transition-all duration-[1000ms] text-[#A3A3A3] hover:text-white w-[350px]">

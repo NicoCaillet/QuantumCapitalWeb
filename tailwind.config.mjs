@@ -4,8 +4,9 @@ export default {
 	theme: {
 		extend: {},
 		screens: {
+			'mo': { max: '850px' },
 			'xl': '1290px'
 		}
 	},
-	plugins: [],
+	plugins: [require('tailwind-hamburgers')],
 }

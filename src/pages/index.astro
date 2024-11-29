@@ -8,31 +8,31 @@ import Footer from "../components/footer.astro";
 <MainLayout />
 <div class="video-container">
   <video autoplay loop muted playsinline class="full-screen-video">
-    <source src="/video.mov" type="video/mp4" />
+    <source src="/qVideo.mp4" type="video/mp4" />
   </video>
   <section class="section-1 text-center text-white">
-    <div class="pr-10">
+    <div class="pr-10 mo:pr-0">
       <h2 class="text-4xl mb-2 mt-20 font-semibold">
         UNLOCKING LONG TERM GROWTH.
       </h2>
-      <p class="w-4/5 m-auto">
+      <p class="w-4/5 m-auto text-lg mo:mt-3">
         Our ambition is to be the most successful investment firm of all time.
         We strive to identify the highest and best uses of capital to generate
         superior long-term returns for the world’s preeminent public and private
         institutions.
       </p>
       <button
-        class="bg-[#D9D9D9]/20 w-[45px] h-[80px] rounded-full text-2xl text-[#ffffff]/60 mt-10"
-        onclick="scrollToSection()"
+        class="button bg-[#D9D9D9]/20 w-[45px] h-[80px] rounded-full text-2xl text-[#ffffff]/60 mt-10"
+        id="scroll-button"
       >
-        &darr;</button
-      >
+        &darr;
+      </button>
     </div>
   </section>
 </div>
 
 <section
-  class="flex text-white justify-center bg-black h-72 items-center"
+  class="flex text-white justify-center bg-black h-72 items-center mo:hidden"
   id="target-section"
 >
   <div class="flex justify-between items-center max-w-[1000px] w-full">
@@ -46,21 +46,30 @@ import Footer from "../components/footer.astro";
     </p>
   </div>
 </section>
-
 <Section />
+<div id="section-img"></div>
+
 <Newsletter />
 <Footer />
 
 <script>
+  const button = document.getElementById("scroll-button");
+
   function scrollToSection() {
     const targetSection = document.getElementById("target-section");
+    const targetSection2 = document.getElementById("section-img");
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      targetSection2.scrollIntoView({ behavior: "smooth" });
     }
+  }
+
+  if (button) {
+    button.addEventListener("click", scrollToSection);
   }
 </script>
 <style>
-  /* Contenedor del video y el texto centrado */
   .video-container {
     position: relative;
     width: 100%;

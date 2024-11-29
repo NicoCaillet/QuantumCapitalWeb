@@ -2,20 +2,22 @@
 
 ---
 
-<footer class="navbar max-w-[1000px] xl:max-w-[1300px] main-layout-overlay">
+<footer
+  class="footer mo:p-20 max-w-[1000px] xl:max-w-[1300px] main-layout-overlay"
+>
   <!-- Logo -->
-  <div class="navbar-logo">
+  <div class="footer-logo">
     <img src="/logob.png" alt="Logo de la Marca" />
   </div>
 
   <div>
-    <p class="text-black font-bold">2024 Quantum Capital.</p>
+    <p class="text-black font-semibold mo:text-sm">2024 Quantum Capital.</p>
   </div>
 </footer>
 
 <style>
-  .navbar {
-    width: 100%; /* Ensure the navbar spans the entire width */
+  .footer {
+    width: 100%; /* Ensure the footer spans the entire width */
     background: white;
     display: flex;
     align-items: center;
@@ -25,12 +27,12 @@
     z-index: 3;
   }
 
-  .navbar-logo img {
+  .footer-logo img {
     height: 50px;
     width: auto;
   }
 
-  .navbar-links {
+  .footer-links {
     display: flex;
     gap: 1.5rem;
     list-style: none;
@@ -38,9 +40,15 @@
     padding: 0;
   }
 
-  .navbar-links a {
+  .footer-links a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .footer {
+      padding: 20px;
+    }
   }
 </style>

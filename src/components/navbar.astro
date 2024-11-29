@@ -1,12 +1,20 @@
-<nav class="navbar main-layout-overlay xl:max-w-[1300px] max-w-[1000px]">
+<nav
+  class="main-layout-overlay mo:px-5 xl:max-w-[1300px] max-w-[1000px] absolute top-0 left-1/2 transform -translate-x-1/2 w-full bg-transparent flex items-center justify-between z-30 py-6"
+>
   <!-- Logo -->
-  <div class="navbar-logo">
+  <div class="navbar-logo mo:h-15">
     <a href="/">
-      <img src="/Logo Quantum.png" alt="Logo de la Marca" />
+      <img src="/Logo Quantum.png" alt="Logo de la Marca" id="logo" />
     </a>
   </div>
-
-  <ul role="list" class="navbar-links">
+  <div
+    class="tham hover:opacity-100 tham-e-squeeze tham-w-6 text-white z-50 hidden mo:block"
+  >
+    <div class="tham-box">
+      <div class="tham-inner bg-white"></div>
+    </div>
+  </div>
+  <ul role="list" class="mo:hidden flex gap-12 m-0 p-0">
     <li class="navbar-item">
       <a class="dropdown-trigger text-white">About Us +</a>
       <!-- Subenlaces -->
@@ -15,26 +23,41 @@
         <a href="/investment-manager">Investment Manager</a>
       </div>
     </li>
-    <li><a href="/performance">Performance</a></li>
-    <li><a href="/releases">Press Release</a></li>
+    <li><a href="/performance" class="text-white">Performance</a></li>
+    <li><a href="/releases" class="text-white">Press Release</a></li>
   </ul>
 </nav>
 
-<style>
-  .navbar {
-    position: absolute; /* Posición absoluta */
-    top: 0; /* Alineado al borde superior */
-    left: 50%; /* Centro relativo al contenedor */
-    transform: translateX(-50%); /* Corrige el desplazamiento del 50% */
-    width: 100%; /* Asegura que abarque todo el ancho disponible */
-    background: transparent; /* Fondo transparente */
-    display: flex; /* Flexbox para alinear los elementos */
-    align-items: center; /* Centra verticalmente */
-    justify-content: space-between; /* Espaciado entre elementos */
-    z-index: 3; /* Asegura que esté por encima del resto */
-    padding: 20px 0;
-  }
+<div class="menu-overlay hidden mo:block" id="menuOverlay">
+  <a href="/" class="menu-link text-2xl">Home</a>
+  <a href="/quantum" class="menu-link text-2xl">About Us</a>
+  <a href="/performance" class="menu-link text-2xl">Performance</a>
+  <a href="/releases" class="menu-link text-2xl">Press Release</a>
+</div>
+<script>
+  const tham = document.querySelector(".tham");
+  const menuOverlay = document.getElementById("menuOverlay");
+  const img = document.getElementById("logo");
 
+  tham.addEventListener("click", () => {
+    tham.classList.toggle("tham-active");
+    menuOverlay.classList.toggle("active");
+    tham.classList.toggle("top");
+    img.classList.toggle("hiddenImg");
+    document.body.classList.toggle("overflow-hidden");
+  });
+</script>
+<style>
+  .tham {
+    position: relative; /* Asegúrate de que genere un nuevo contexto propio si es necesario */
+    z-index: 50; /* Más alto que el overlay */
+  }
+  .hiddenImg {
+    display: none;
+  }
+  .top {
+    margin-top: 18px;
+  }
   .navbar-logo img {
     height: 50px;
     width: auto;
@@ -55,16 +78,16 @@
 
   /* Estilo para el enlace principal */
   .navbar-item {
-    position: relative; /* Necesario para posicionar los subenlaces */
+    position: relative;
   }
 
   .dropdown-trigger {
     cursor: pointer;
   }
-  /* Subenlaces ocultos inicialmente */
+
   .dropdown-menu {
     position: absolute;
-    top: 100%; /* Comienza justo debajo del enlace principal */
+    top: 100%;
     left: 0;
     display: flex;
     flex-direction: row;
@@ -73,12 +96,12 @@
     background-color: transparent;
     padding-top: 10px;
     border-radius: 5px;
-    opacity: 0; /* Comienza invisible */
-    transform: translateY(-10px); /* Empieza ligeramente hacia arriba */
+    opacity: 0;
+    transform: translateY(-10px);
     transition:
       opacity 0.3s ease,
-      transform 0.3s ease; /* Efecto de transición */
-    pointer-events: none; /* Evita interacciones mientras está oculto */
+      transform 0.3s ease;
+    pointer-events: none;
   }
 
   .dropdown-menu a {
@@ -97,5 +120,83 @@
   /* Efecto de hover en subenlaces */
   .dropdown-menu a:hover {
     text-decoration: none;
+  }
+  .hamburger {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition:
+      transform 0.3s,
+      background-color 0.3s;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition:
+      transform 0.3s,
+      background-color 0.3s;
+  }
+
+  .hamburger::before {
+    top: -10px;
+  }
+
+  .hamburger::after {
+    top: 10px;
+  }
+
+  .hamburger.active {
+    background-color: white;
+  }
+
+  .hamburger.active::before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Menu overlay */
+  .menu-overlay {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: opacity 0.3s;
+  }
+
+  .menu-overlay.active {
+    display: flex;
+  }
+
+  .menu-link {
+    color: white;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .menu-link:hover {
+    color: gray;
+  }
+  @media (max-width: 1024px) {
+    .dropdown-menu {
+      display: none;
+    }
   }
 </style>

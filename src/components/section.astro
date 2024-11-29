@@ -171,6 +171,22 @@
     top: 0;
   }
 
+  @media only screen and (max-width: 850px) {
+    .first-image {
+      background-image: none;
+    }
+
+    .sec-image {
+      background-image: none;
+    }
+    .third-image {
+      background-image: none;
+    }
+    .content-image.right:before,
+    .content-image.left:before {
+      border-right: 100vh solid transparent;
+    }
+  }
   @media only screen and (min-width: 992px) {
     .content-image {
       background-attachment: fixed;
