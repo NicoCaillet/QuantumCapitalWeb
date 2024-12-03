@@ -2,9 +2,9 @@
 
 ---
 
-<section class="bg-black">
+<section class="bg-black mo:hidden">
   <div
-    class="m-auto bg-black max-w-[1000px] xl:max-w-[1300px] text-white mt-96"
+    class="m-auto bg-black max-w-[1000px] xl:max-w-[1300px] text-white mt-96 mo:mt-0"
   >
     <div class="text-transparent">.</div>
     <h1 class="h-[3px] w-28 bg-white"></h1>
@@ -45,45 +45,46 @@
   </div>
 </section>
 
-<section class="bg-black pb-56">
+<section class="bg-black pb-56 mo:pb-16">
   <div
-    class="pt-20 m-auto bg-black max-w-[1000px] xl:max-w-[1300px] text-white"
+    class="pt-20 m-auto bg-black max-w-[1000px] xl:max-w-[1300px] text-white mo:px-5"
   >
-    <h1 class="h-[3px] w-28 bg-white"></h1>
-    <h2 class="text-4xl my-4">Contact Us</h2>
+    <h1 class="h-[3px] w-28 bg-white mo:hidden"></h1>
+    <h2 class="text-4xl my-4 mo:text-3xl mo:font-semibold">Contact Us</h2>
     <p>
       Reach out to Quantum Capital for innovative investment solutions.
       <br />
-      Email: <strong>contact@quantumcapitalg.com</strong> or call us at <strong
-        >(+54) 9 11 2842-8258.</strong
-      >
+      Email: <strong>contact@quantumcapitalg.com</strong> or call us at <br
+        class="hidden mo:block"
+      />
+      <strong>(+54) 9 11 2842-8258.</strong>
     </p>
     <br />
     <div class="text-white flex space-x-96 mo:flex-col mo:space-x-0">
       <div class="space-y-4">
         <p class="font-semibold">REGISTER FOR ALERTS</p>
         <p class="font-semibold">
-          Sign up to be notified of <br />important updates.
+          Sign up to be notified of <br class="mo:hidden" />important updates.
         </p>
       </div>
       <div class="space-y-4">
-        <p class="font-semibold">EMAIL</p>
-        <div class="flex items-center space-x-7">
+        <p class="font-semibold mo:hidden">EMAIL</p>
+        <div class="flex items-center space-x-7 mo:space-x-0">
           <form
             action="https://formspree.io/f/meoqzvde"
             method="POST"
-            class="flex space-x-2 mo:flex-col"
+            class="flex space-x-2 mo:flex-col mo:w-full mo:space-x-0"
           >
             <input
               type="email"
               name="email"
               placeholder="Your email"
-              class="h-10 w-80 bg-black border-white border px-2 text-white"
+              class="h-10 w-80 bg-black border-white border px-2 text-white mo:w-full mo:h-[50px]"
               required
             />
             <button
               type="submit"
-              class="h-10 w-24 bg-gray-800 text-white font-semibold"
+              class="h-10 w-24 bg-gray-800 text-white font-semibold mo:ml-0 mo:h-[50px] mo:w-[180px] mo:mt-3"
             >
               Submit
             </button>

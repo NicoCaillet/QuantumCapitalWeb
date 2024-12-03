@@ -6,10 +6,11 @@ import { data } from "../utils/data";
 ---
 
 <MainLayout />
-<img src="/city.jpg" alt="" class="top-0 w-full z-0 h-[500px]" />
-<div class="w-full bg-black z-40 h-52 content-center mo:h-auto">
+<img src="/city.jpg" alt="" class="top-0 w-full z-0 h-[500px] mo:hidden" />
+<img src="/mo perfo.jpg" alt="" class="top-0 w-full z-0 hidden mo:block" />
+<div class="w-full bg-black z-40 h-52 content-center mo:h-0">
   <div
-    class="max-w-[1000px] xl:max-w-[1300px] flex justify-between items-center m-auto mo:flex-col mo:justify-center mo:space-y-10 mo:pb-16 mo:absolute mo:top-32 mo:m-auto mo:w-dvw"
+    class="max-w-[1000px] xl:max-w-[1300px] flex justify-between items-center m-auto mo:flex-col mo:justify-center mo:space-y-10 mo:pb-10 mo:absolute mo:top-32 mo:m-auto mo:w-dvw"
   >
     <div
       class="flex-1 text-left text-white xl:self-start mo:w-full mo:text-center"
@@ -20,19 +21,31 @@ import { data } from "../utils/data";
       </h4>
     </div>
     <div class="h-40 w-[2px] bg-white mo:hidden"></div>
-    <div class="flex-1 text-center text-white self-start space-y-3 mo:w-full">
-      <h4 class="text-[60px] font-semibold -mt-4">2020</h4>
-      <p>Date of Foundation</p>
+    <div
+      class="flex-1 text-center text-white self-start space-y-3 mo:w-full mo:-space-y-6"
+    >
+      <h4 class="text-[60px] font-semibold -mt-4 mo:text-[96px] mo:font-medium">
+        2020
+      </h4>
+      <p class="mo:text-[20px]">Date of Foundation</p>
     </div>
     <div class="h-40 w-[2px] bg-white mo:hidden"></div>
-    <div class="flex-1 text-center text-white self-start space-y-3 mo:w-full">
-      <h4 class="text-[60px] font-semibold -mt-4">$45M</h4>
-      <p>AUM</p>
+    <div
+      class="flex-1 text-center text-white self-start space-y-3 mo:w-full mo:-space-y-6"
+    >
+      <h4 class="text-[60px] font-semibold -mt-4 mo:text-[96px] mo:font-medium">
+        $45M
+      </h4>
+      <p class="mo:text-[20px]">AUM</p>
     </div>
     <div class="h-40 w-[2px] bg-white mo:hidden"></div>
-    <div class="flex-1 text-center text-white self-start space-y-3 mo:w-full">
-      <h4 class="text-[60px] font-semibold -mt-4">33%</h4>
-      <p>CAGR</p>
+    <div
+      class="flex-1 text-center text-white self-start space-y-3 mo:w-full mo:-space-y-6"
+    >
+      <h4 class="text-[60px] font-semibold -mt-4 mo:text-[96px] mo:font-medium">
+        33%
+      </h4>
+      <p class="mo:text-[20px]">CAGR</p>
     </div>
   </div>
 </div>

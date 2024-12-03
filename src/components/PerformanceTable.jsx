@@ -2,6 +2,7 @@ import { useState } from "preact/hooks";
 import Table from "./table";
 import "./styles.css";
 import { div } from "framer-motion/client";
+
 export default function PerformanceTable({ data }) {
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedData, setSelectedData] = useState(null);
@@ -20,7 +21,6 @@ export default function PerformanceTable({ data }) {
     <div className="">  
       {selectedYear && (
         <div className="flex justify-between items-center mo:flex-col">
-
           <div className="w-[699px] flex border-2 border-black mb-6 mo:w-full">
             {data.map((item) => (
               <div
