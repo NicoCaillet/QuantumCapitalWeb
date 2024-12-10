@@ -7,8 +7,9 @@ import Footer from "../components/footer.astro";
 
 <MainLayout />
 <div class="video-container">
-  <video autoplay loop muted playsinline class="full-screen-video">
-    <source src="/qVideo.mp4" type="video/mp4" />
+  <video id="myvid" autoplay loop muted playsinline class="full-screen-video">
+    <source src="/qVideo.mp4" type="video/mp4" media="(min-width: 769px)" />
+    <source src="/Movideo.mp4" type="video/mp4" media="(max-width: 768px)" />
   </video>
   <section class="section-1 text-center text-white">
     <div class="pr-10 mo:pr-0">
@@ -46,8 +47,9 @@ import Footer from "../components/footer.astro";
     </p>
   </div>
 </section>
-<Section />
 <div id="section-img"></div>
+
+<Section />
 
 <Newsletter />
 <Footer />
@@ -58,13 +60,12 @@ import Footer from "../components/footer.astro";
   function scrollToSection() {
     const targetSection = document.getElementById("target-section");
     const targetSection2 = document.getElementById("section-img");
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    } else {
+    if (targetSection.className.includes("mo:hidden")) {
       targetSection2.scrollIntoView({ behavior: "smooth" });
+    } else {
+      targetSection.scrollIntoView({ behavior: "smooth" });
     }
   }
-
   if (button) {
     button.addEventListener("click", scrollToSection);
   }

@@ -52,12 +52,11 @@ import { data } from "../utils/data";
 
 <!-- SECTION TABLE -->
 <section class="bg-white">
-  <div class="mx-auto py-12 mo:py-5 max-w-[1000px] xl:max-w-[1300px] mo:px-10">
+  <div class="mx-auto py-12 mo:py-5 px-10 xl:max-w-[1300px] mo:px-10 xl:px-0">
     <div class="h-[2px] w-28 bg-black mb-10 mo:hidden"></div>
     <h2 class="text-3xl font-semibold mb-4 mo:hidden">
       Net Asset Values and Returns
     </h2>
-    <!-- Menu solo year - Esto aparece cuando una box se ha tocado -->
     <PerformanceTable client:load data={data} />
   </div>
 </section>

@@ -1,6 +1,25 @@
+import { useEffect, useRef } from "preact/hooks";
+import { animate, stagger } from "@motionone/dom";
+
 const Table = ({ headers, rows }) => {
+  const rowsRef = useRef([]);
+  console.log(headers,rows)
+
+  useEffect(() => {
+      console.log('activating  tricks')
+      rowsRef.current.forEach((row, index) => {
+        if (row) {
+          animate(
+            row,
+            { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+            { duration: 0.5, delay: index * 0.1, easing: "ease-out" }
+          );
+        }
+      });
+  }, [headers, rows]);
+
   return (
-    <div className="overflow-x-auto bg-white dark:bg-neutral-700">
+    <div className="overflow-x-auto bg-white dark:bg-neutral-700 overflow-hidden">
       <table className="min-w-full text-left text-sm ">
         <thead className="border-b-2 dark:border-neutral-600 bg-black text-white whitespace-nowrap">
           <tr>
@@ -15,6 +34,7 @@ const Table = ({ headers, rows }) => {
           {rows.map((row, index) => (
             <tr
               key={index}
+              ref={(el) => (rowsRef.current[index] = el)}
               className={`border-b dark:border-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-600 ${
                 index % 2 === 0 ? "bg-white" : "bg-neutral-50"
               }`}
