@@ -20,7 +20,10 @@ import NavBar from "../components/navbar.astro";
 <style is:global>
   @font-face {
     font-family: "Futura Pt";
-    src: url("/font/FuturaCyrillicMedium.tff") format("truetype");
+    src:
+      url("/font/FuturaCyrillicMedium.woff2") format("woff2"),
+      url("/font/FuturaCyrillicMedium.woff") format("woff"),
+      url("/font/FuturaCyrillicMedium.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;

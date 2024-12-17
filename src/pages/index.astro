@@ -7,9 +7,18 @@ import Footer from "../components/footer.astro";
 
 <MainLayout />
 <div class="video-container">
-  <video id="myvid" autoplay loop muted playsinline class="full-screen-video">
+  <video
+    id="myvid"
+    autoplay
+    loop
+    muted
+    playsinline
+    class="full-screen-video"
+    preload="auto"
+  >
     <source src="/qVideo.mp4" type="video/mp4" media="(min-width: 769px)" />
     <source src="/Movideo2.mp4" type="video/mp4" media="(max-width: 768px)" />
+    Tu navegador no soporta este video.
   </video>
   <section class="section-1 text-center text-white">
     <div class="pr-10 mo:pr-0">
