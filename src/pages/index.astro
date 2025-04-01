@@ -13,12 +13,23 @@ import Footer from "../components/footer.astro";
     loop
     muted
     playsinline
-    class="full-screen-video"
-    preload="auto"
+    webkit-playsinline
+    class="full-screen-video mo:hidden"
+    preload="metadata"
   >
-    <source src="/qVideo.mp4" type="video/mp4" media="(min-width: 769px)" />
-    <source src="/Movideo2.mp4" type="video/mp4" media="(max-width: 768px)" />
-    Tu navegador no soporta este video.
+    <source src="/qVideo.mp4" type="video/mp4" />
+  </video>
+  <video
+    id="myvid2"
+    autoplay
+    loop
+    muted
+    playsinline
+    webkit-playsinline
+    class="full-screen-video hidden mo:block"
+    preload="metadata"
+  >
+    <source src="/Movideo2.mp4" type="video/mp4" />
   </video>
   <section class="section-1 text-center text-white">
     <div class="pr-10 mo:pr-0">
@@ -95,6 +106,16 @@ import Footer from "../components/footer.astro";
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  .full-screen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
 
   .full-screen-video {
